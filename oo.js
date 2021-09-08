@@ -1,3 +1,5 @@
+document.body.append(CreateCSS);
+var dataHasil = 0;
 if (document.getElementById('safelink-start')) {
     document.getElementById('safelink-start').innerHTML = `
 <br />
