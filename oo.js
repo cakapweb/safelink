@@ -1,3 +1,192 @@
+var CreateCSS = document.createElement('style');
+CreateCSS.innerHTML = `
+  .cls-1 {
+  fill: #ffc541;
+}
+.cls-2 {
+  fill: #3498db;
+}
+.cls-3 {
+  fill: #3f51b5;
+}
+.cls-4 {
+  fill: #f78d5e;
+}
+.cls-5 {
+  fill: #fa976c;
+}
+.cls-6,
+.cls-7,
+.cls-8 {
+  fill: #b65c32;
+}
+.cls-8.wheel {
+  fill: #2962ff;
+}
+.cls-10,
+.cls-6 {
+  opacity: 0.6;
+}
+.cls-7 {
+  opacity: 0.4;
+}
+.cls-9 {
+  fill: #f4b73b;
+}
+.cls-11 {
+  fill: #f9c358;
+}
+.cls-12 {
+  fill: #9b462c;
+}
+.cls-13 {
+  fill: #aa512e;
+}
+.cls-14 {
+  fill: #7d6aa5;
+}
+.wheel {
+  animation: wheel-rotate 6s ease infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes wheel-rotate {
+  50% {
+    transform: rotate(360deg);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+  100% {
+    transform: rotate(960deg);
+  }
+}
+#bike {
+  animation: bike-anim 6s ease infinite;
+}
+@keyframes bike-anim {
+  0% {
+    transform: translateX(-1300px);
+  }
+  50% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  100% {
+    transform: translateX(1300px);
+  }
+}
+.circle {
+  animation: circle-anim ease infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  perspective: 0;
+}
+.circle.c1 {
+  animation-duration: 2s;
+}
+.circle.c2 {
+  animation-duration: 3s;
+}
+.circle.c3 {
+  animation-duration: 1s;
+}
+.circle.c4 {
+  animation-duration: 1s;
+}
+.circle.c5 {
+  animation-duration: 2s;
+}
+.circle.c6 {
+  animation-duration: 3s;
+}
+@keyframes circle-anim {
+  50% {
+    transform: scale(0.2) rotateX(360deg) rotateY(360deg);
+  }
+}
+.goodbye svg {
+  max-width: 500px;
+  height: auto;
+  width: auto;
+}
+.card {
+  border-radius: 0.5rem;
+  background: #fff;
+  height: auto;
+  width: auto;
+  padding: 6px 20px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: rgba(129, 129, 129, 0.56) 0 1px 3px, #e0e2e4 0 0 0 3px;
+}
+.button1 {
+  display: inline-block;
+  padding: 6px 20px;
+  margin: 15px 0 10px 0;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  color: #414141;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dark-mode .card {
+  color: #fff;
+  background: #202442;
+}
+.dark-mode .card .button1 {
+  background: #fff;
+}
+.dark-mode .card .button1:hover {
+  background-color: #3a7bd5;
+  border-color: #3a7bd5;
+  color: #fff;
+}
+.button1:hover {
+  background-color: #3a7bd5;
+  border-color: #3a7bd5;
+  color: #fff;
+}
+.ads-top {
+  padding: 5px 0 15px 0;
+  text-align: center;
+}
+.ads-left,
+.ads-right {
+  display: inline-block;
+  float: left;
+  margin: 5px 15px 0 0;
+}
+.ads-right {
+  float: right;
+  margin: 5px 0 0 15px;
+}
+#daplong,
+.visit-link {
+  margin-right: 0;
+  padding: 7px 30px;
+  line-height: 25px;
+  font-family: Lato, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+.visit-link {
+  padding: 7px 50px;
+}
+#HTML99,
+#HTML99 .widget-content {
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media screen and (max-width: 768px) {
+  .ads-left,
+  .ads-right {
+    display: block;
+    float: none;
+    margin: 5px 0 0;
+    text-align: center;
+  }
+}
+`;
 document.body.append(CreateCSS);
 var dataHasil = 0;
 if (document.getElementById('safelink-start')) {
